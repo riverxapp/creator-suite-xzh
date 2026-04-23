@@ -12,8 +12,8 @@ export default function Home() {
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
                 Internal CRM workspace
               </p>
-              <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-                Centralize customers, deals, and daily team operations in one place.
+              <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">Plan and launch an end-to-end internal CRM app with persistent storage, authentication, and dashboard workflows for customers and leads.
+
               </h1>
               <p className="text-base leading-7 text-muted-foreground sm:text-lg">
                 Track leads, manage accounts, and keep your sales pipeline moving with a clean internal app designed for fast decisions.
