@@ -7,26 +7,26 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Starter",
-  description: "A blank starter page. Ready to build.",
+  description: "A blank starter page. Ready to build."
 };
 
 export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+  children
+
+
+}: {children: React.ReactNode;}) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={"en"} suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem
-          disableTransitionOnChange
-        >
+          disableTransitionOnChange>
+          
           {children}
         </ThemeProvider>
-      </body>
-    </html>
-  );
+      <div className="min-h-screen bg-background text-foreground">{children}</div></body>
+    </html>);
+
 }
