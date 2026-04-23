@@ -10,13 +10,31 @@ old-dockerfile.txt
 old-docker-compose.yml
 
 # Unified CRM planning scope assumptions:
-# - Repository remains a Next.js app-router project; CRM surfaces are planned, not documented here as implemented runtime architecture.
-# - Persistent storage for local development may use browser-backed export/import flows plus optional file-based artifacts.
-# - Ignore common local data directories, sqlite files, and lightweight embedded database artifacts to avoid shipping runtime state.
+# - Decision contract: execute.
+# - Intent summary: plan an end-to-end internal CRM app for this Next.js repository with landing, authentication, dashboard, customers, and leads surfaces.
+# - Requested outcome: deterministic, one-file-per-task planning context that preserves current landing-page behavior while documenting likely CRM expansion surfaces.
+# - In scope: document planning assumptions, expected CRM target surfaces, and local persistent-storage ignore patterns for development/runtime artifacts.
+# - Out of scope: claiming auth, dashboard, API routes, or database runtime implementation already exists in the repository.
+# - Constraints: one repository per conversation, one file per task, maximum 5 tasks per run, preserve unrelated behavior, prefer smallest sufficient scope.
+# - Assumptions: App Router remains the routing model; persistent storage may begin with local file or embedded-db artifacts until a future formal backend is introduced.
+# - Affected surfaces: app/page.tsx, future auth route, future dashboard route, future customers route, future leads route.
+# - Target surface files expected for scoped CRM planning:
+#   - app/page.tsx (landing entry)
+#   - app/auth/page.tsx (authentication)
+#   - app/dashboard/page.tsx (dashboard)
+#   - app/dashboard/customers/page.tsx (customers)
+#   - app/dashboard/leads/page.tsx (leads)
+# - Risk notes: repository currently lacks implemented auth/backend/data modules; avoid treating plan assumptions as shipped features.
+# - Success checks: ignore local persistent data artifacts; planning notes stay explicit, concise, and non-speculative.
+# - Ignore common local data directories, sqlite files, logs, and lightweight embedded database artifacts to avoid shipping runtime state.
 data/
 storage/
+local-data/
+uploads/
 *.db-wal
 *.db
 *.sqlite
 *.sqlite3
 *.db-journal
+*.pglite
+*.log
