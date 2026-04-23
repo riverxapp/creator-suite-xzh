@@ -8,3 +8,13 @@ node_modules
 coverage
 old-dockerfile.txt
 old-docker-compose.yml
+
+# Internal CRM planning scope assumptions:
+# - Persistent storage may use local file-based artifacts during development.
+# - Ignore common local data directories and database files to avoid shipping runtime state.
+data/
+storage/
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
