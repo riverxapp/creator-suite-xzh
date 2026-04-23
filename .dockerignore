@@ -9,23 +9,32 @@ coverage
 old-dockerfile.txt
 old-docker-compose.yml
 
-# Unified CRM planning scope assumptions:
-# - Decision contract: execute.
+# Unified agent instructions for codeType=nextjs:
+# - Role: Unified planning and execution orchestrator for repo-scoped code changes.
+# - Mission: convert natural-language requests into deterministic, file-scoped execution tasks with minimal ambiguity.
+# - Core rules: one repository per conversation; one file per task; maximum 5 tasks per run; prefer concrete execution over unnecessary clarification; use ask_user only for true blockers; preserve unrelated behavior.
+# - Decision contract: return exactly one of execute, ask_user, or respond.
+# - Tasking contract: produce deterministic, de-duplicated targets; keep plan text and target list aligned; prefer the smallest sufficient scope.
+# - Context policy: derive scope from repository tree, loaded file content, conversation history, code-type overlay policy, and unified plan instruction policy; use general knowledge only to interpret intent, not as repository fact.
+# - Execution expectations: build explicit file-scoped prompts from the base instruction, nextjs overlay, unified plan instruction, and context prompt + plan steps; keep changes deterministic and reviewable.
+# - Safety and quality: avoid speculative broad rewrites, unrelated file churn, and non-operational wording; preserve downstream deterministic execution/recovery compatibility.
+#
+# Scope document for current CRM planning request:
 # - Intent summary: plan an end-to-end internal CRM app for this Next.js repository with landing, authentication, dashboard, customers, and leads surfaces.
-# - Requested outcome: deterministic, one-file-per-task planning context that preserves current landing-page behavior while documenting likely CRM expansion surfaces.
+# - Requested outcome: deterministic planning context that documents likely CRM expansion surfaces while preserving current landing-page behavior.
 # - In scope: document planning assumptions, expected CRM target surfaces, and local persistent-storage ignore patterns for development/runtime artifacts.
 # - Out of scope: claiming auth, dashboard, API routes, or database runtime implementation already exists in the repository.
 # - Constraints: one repository per conversation, one file per task, maximum 5 tasks per run, preserve unrelated behavior, prefer smallest sufficient scope.
-# - Assumptions: App Router remains the routing model; persistent storage may begin with local file or embedded-db artifacts until a future formal backend is introduced.
+# - Assumptions: repository uses Next.js App Router; persistent storage may begin with local file or embedded-db artifacts before a future formal backend is introduced.
 # - Affected surfaces: app/page.tsx, future auth route, future dashboard route, future customers route, future leads route.
-# - Target surface files expected for scoped CRM planning:
+# - Target file candidates:
 #   - app/page.tsx (landing entry)
 #   - app/auth/page.tsx (authentication)
 #   - app/dashboard/page.tsx (dashboard)
 #   - app/dashboard/customers/page.tsx (customers)
 #   - app/dashboard/leads/page.tsx (leads)
 # - Risk notes: repository currently lacks implemented auth/backend/data modules; avoid treating plan assumptions as shipped features.
-# - Success checks: ignore local persistent data artifacts; planning notes stay explicit, concise, and non-speculative.
+# - Success checks: ignore local persistent data artifacts; keep planning notes explicit, concise, and non-speculative.
 # - Ignore common local data directories, sqlite files, logs, and lightweight embedded database artifacts to avoid shipping runtime state.
 data/
 storage/
