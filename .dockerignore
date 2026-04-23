@@ -9,11 +9,13 @@ coverage
 old-dockerfile.txt
 old-docker-compose.yml
 
-# Internal CRM planning scope assumptions:
-# - Persistent storage may use local file-based artifacts during development.
-# - Ignore common local data directories and database files to avoid shipping runtime state.
+# Unified CRM planning scope assumptions:
+# - Repository remains a Next.js app-router project; CRM surfaces are planned, not documented here as implemented runtime architecture.
+# - Persistent storage for local development may use browser-backed export/import flows plus optional file-based artifacts.
+# - Ignore common local data directories, sqlite files, and lightweight embedded database artifacts to avoid shipping runtime state.
 data/
 storage/
+*.db-wal
 *.db
 *.sqlite
 *.sqlite3
