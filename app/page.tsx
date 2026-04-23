@@ -56,24 +56,26 @@ export default function Home() {
           </article>
         </section>
         <section className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-[1.25fr_0.75fr]">
-          <article className="rounded-3xl border border-border/60 bg-card p-6 shadow-sm">
-            <h2 className="text-lg font-semibold">Workspace navigation</h2>
-            <ul className="mt-4 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
-              <li>Leads</li>
-              <li>Accounts</li>
-              <li>Deals</li>
-              <li>Tasks</li>
-              <li>Reports</li>
-              <li>Settings</li>
-            </ul>
-          </article>
-          <article className="rounded-3xl border border-border/60 bg-card p-6 shadow-sm">
-            <h2 className="text-lg font-semibold">Today&apos;s focus</h2>
-            <p className="mt-2 text-sm leading-6 text-muted-foreground">
-              Prioritize urgent follow-ups and recent opportunities to keep the sales cycle moving.
-            </p>
-          </article>
-        </section>
-        <HeroSection />
+  <article className="rounded-3xl border border-border/60 bg-card p-6 shadow-sm">
+    <h2 className="text-lg font-semibold">CRM navigation</h2>
+    <ul className="mt-4 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
+      <li>Customers</li>
+      <li>Deals</li>
+      <li>Tasks</li>
+      <li>Reports</li>
+      <li>Pipeline</li>
+      <li>Settings</li>
+    </ul>
+  </article>
+  <article className="rounded-3xl border border-border/60 bg-card p-6 shadow-sm">
+    <h2 className="text-lg font-semibold">Recent activity</h2>
+    <ul className="mt-4 space-y-3 text-sm leading-6 text-muted-foreground">
+      <li>Acme Corp moved to proposal review after today&apos;s sales call.</li>
+      <li>3 follow-up tasks are due before end of day for open opportunities.</li>
+      <li>Northwind account owner added new notes and next-step reminders.</li>
+    </ul>
+  </article>
+</section>
+        
       </main>
     </div>);}
