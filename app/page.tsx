@@ -4,52 +4,52 @@ import Link from "next/link";
 import { ArrowRight, BarChart3, Briefcase, CheckCircle2, Clock3, ShieldCheck, Users } from "lucide-react";
 
 const metrics = [
-  { label: "Pipeline coverage", value: "$1.8M", detail: "Qualified opportunities across active reps" },
-  { label: "Win rate", value: "28%", detail: "Improved close performance this quarter" },
-  { label: "Team SLA", value: "< 2 hrs", detail: "Average first-response time for inbound leads" }
-];
+{ label: "Pipeline coverage", value: "$1.8M", detail: "Qualified opportunities across active reps" },
+{ label: "Win rate", value: "28%", detail: "Improved close performance this quarter" },
+{ label: "Team SLA", value: "< 2 hrs", detail: "Average first-response time for inbound leads" }];
+
 
 const featureCards = [
-  {
-    title: "Revenue pipeline",
-    description: "Track deal stages, forecast confidence, and keep leadership aligned on upcoming revenue.",
-    icon: BarChart3
-  },
-  {
-    title: "Account operations",
-    description: "Centralize account ownership, relationship history, and follow-up motion for every customer.",
-    icon: Briefcase
-  },
-  {
-    title: "Team coordination",
-    description: "Give sales teams a clearer operating rhythm with tasks, priorities, and shared visibility.",
-    icon: Users
-  }
-];
+{
+  title: "Revenue pipeline",
+  description: "Track deal stages, forecast confidence, and keep leadership aligned on upcoming revenue.",
+  icon: BarChart3
+},
+{
+  title: "Account operations",
+  description: "Centralize account ownership, relationship history, and follow-up motion for every customer.",
+  icon: Briefcase
+},
+{
+  title: "Team coordination",
+  description: "Give sales teams a clearer operating rhythm with tasks, priorities, and shared visibility.",
+  icon: Users
+}];
+
 
 const highlights = [
-  "Structured dashboards for customers, leads, and pipeline status",
-  "Lightweight auth flow for controlled internal workspace access",
-  "Persistent-ready architecture that can evolve into production workflows"
-];
+"Structured dashboards for customers, leads, and pipeline status",
+"Lightweight auth flow for controlled internal workspace access",
+"Persistent-ready architecture that can evolve into production workflows"];
+
 
 const activityFeed = [
-  {
-    title: "Acme Corp moved into proposal review",
-    detail: "Owner updated pricing notes and scheduled procurement follow-up.",
-    time: "10 min ago"
-  },
-  {
-    title: "Three high-priority tasks need attention today",
-    detail: "Open follow-ups are concentrated across active mid-market opportunities.",
-    time: "1 hour ago"
-  },
-  {
-    title: "Northwind account record received new stakeholder notes",
-    detail: "Recent call summary captured next steps for onboarding and renewal planning.",
-    time: "Today"
-  }
-];
+{
+  title: "Acme Corp moved into proposal review",
+  detail: "Owner updated pricing notes and scheduled procurement follow-up.",
+  time: "10 min ago"
+},
+{
+  title: "Three high-priority tasks need attention today",
+  detail: "Open follow-ups are concentrated across active mid-market opportunities.",
+  time: "1 hour ago"
+},
+{
+  title: "Northwind account record received new stakeholder notes",
+  detail: "Recent call summary captured next steps for onboarding and renewal planning.",
+  time: "Today"
+}];
+
 
 export default function Home() {
   return (
@@ -60,49 +60,49 @@ export default function Home() {
         <section className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="rounded-[2rem] border border-border/60 bg-card p-6 shadow-sm sm:p-8 lg:p-10">
             <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
-                <ShieldCheck className="h-3.5 w-3.5" />
-                Professional CRM workspace
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">Executive CRM workspace
+
+
               </span>
-              <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                Production-style UX
+              <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">Premium UX
+
               </span>
             </div>
 
             <div className="mt-6 max-w-3xl space-y-5">
-              <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-                A more polished CRM experience for pipeline visibility, team execution, and account growth.
+              <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">A more refined CRM experience for pipeline visibility, team execution, and account growth.
+
               </h1>
-              <p className="max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
-                Upgrade the existing CRM shell into a cleaner, more executive-ready interface with clearer hierarchy,
-                stronger data presentation, and faster navigation into the core workspace.
+              <p className="max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">Upgrade the existing CRM shell into a cleaner, more executive-ready interface with stronger hierarchy, clearer data presentation, and faster navigation into the core workspace.
+
+
               </p>
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/dashboard"
-                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90"
-              >
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90">
+                
                 Open dashboard
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/auth"
-                className="inline-flex items-center gap-2 rounded-xl border border-border bg-background px-5 py-3 text-sm font-medium transition hover:bg-accent"
-              >
+                className="inline-flex items-center gap-2 rounded-xl border border-border bg-background px-5 py-3 text-sm font-medium transition hover:bg-accent">
+                
                 View authentication
               </Link>
             </div>
 
             <div className="mt-10 grid gap-4 md:grid-cols-3">
-              {metrics.map((metric) => (
-                <div key={metric.label} className="rounded-2xl border border-border bg-background p-4">
+              {metrics.map((metric) =>
+              <div key={metric.label} className="rounded-2xl border border-border bg-background p-4">
                   <p className="text-sm text-muted-foreground">{metric.label}</p>
                   <p className="mt-2 text-3xl font-semibold tracking-tight">{metric.value}</p>
                   <p className="mt-2 text-sm leading-6 text-muted-foreground">{metric.detail}</p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
 
@@ -148,12 +148,12 @@ export default function Home() {
             <div className="rounded-[2rem] border border-border/60 bg-card p-6 shadow-sm sm:p-8">
               <h2 className="text-lg font-semibold">What this upgrade emphasizes</h2>
               <ul className="mt-5 space-y-4">
-                {highlights.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm leading-6 text-muted-foreground">
+                {highlights.map((item) =>
+                <li key={item} className="flex items-start gap-3 text-sm leading-6 text-muted-foreground">
                     <CheckCircle2 className="mt-0.5 h-4 w-4 flex-none text-primary" />
                     <span>{item}</span>
                   </li>
-                ))}
+                )}
               </ul>
             </div>
           </aside>
@@ -173,8 +173,8 @@ export default function Home() {
                 </div>
                 <h2 className="mt-5 text-xl font-semibold">{card.title}</h2>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">{card.description}</p>
-              </article>
-            );
+              </article>);
+
           })}
         </section>
 
@@ -193,33 +193,33 @@ export default function Home() {
             </div>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {["Customers", "Leads", "Pipeline", "Tasks", "Reports", "Settings"].map((item) => (
-                <div key={item} className="rounded-2xl border border-border bg-background px-4 py-4">
+              {["Customers", "Leads", "Pipeline", "Tasks", "Reports", "Settings"].map((item) =>
+              <div key={item} className="rounded-2xl border border-border bg-background px-4 py-4">
                   <p className="font-medium">{item}</p>
                   <p className="mt-1 text-sm text-muted-foreground">
                     Focused surface for internal CRM workflows and team decision-making.
                   </p>
                 </div>
-              ))}
+              )}
             </div>
           </article>
 
           <article className="rounded-[2rem] border border-border/60 bg-card p-6 shadow-sm sm:p-8">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">Recent activity</p>
             <div className="mt-6 space-y-4">
-              {activityFeed.map((item) => (
-                <div key={item.title} className="rounded-2xl border border-border bg-background p-4">
+              {activityFeed.map((item) =>
+              <div key={item.title} className="rounded-2xl border border-border bg-background p-4">
                   <div className="flex items-start justify-between gap-4">
                     <h3 className="text-sm font-semibold leading-6">{item.title}</h3>
                     <span className="whitespace-nowrap text-xs text-muted-foreground">{item.time}</span>
                   </div>
                   <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.detail}</p>
                 </div>
-              ))}
+              )}
             </div>
           </article>
         </section>
       </main>
-    </div>
-  );
+    </div>);
+
 }
