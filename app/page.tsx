@@ -1,81 +1,225 @@
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
+import Link from "next/link";
+import { ArrowRight, BarChart3, Briefcase, CheckCircle2, Clock3, ShieldCheck, Users } from "lucide-react";
+
+const metrics = [
+  { label: "Pipeline coverage", value: "$1.8M", detail: "Qualified opportunities across active reps" },
+  { label: "Win rate", value: "28%", detail: "Improved close performance this quarter" },
+  { label: "Team SLA", value: "< 2 hrs", detail: "Average first-response time for inbound leads" }
+];
+
+const featureCards = [
+  {
+    title: "Revenue pipeline",
+    description: "Track deal stages, forecast confidence, and keep leadership aligned on upcoming revenue.",
+    icon: BarChart3
+  },
+  {
+    title: "Account operations",
+    description: "Centralize account ownership, relationship history, and follow-up motion for every customer.",
+    icon: Briefcase
+  },
+  {
+    title: "Team coordination",
+    description: "Give sales teams a clearer operating rhythm with tasks, priorities, and shared visibility.",
+    icon: Users
+  }
+];
+
+const highlights = [
+  "Structured dashboards for customers, leads, and pipeline status",
+  "Lightweight auth flow for controlled internal workspace access",
+  "Persistent-ready architecture that can evolve into production workflows"
+];
+
+const activityFeed = [
+  {
+    title: "Acme Corp moved into proposal review",
+    detail: "Owner updated pricing notes and scheduled procurement follow-up.",
+    time: "10 min ago"
+  },
+  {
+    title: "Three high-priority tasks need attention today",
+    detail: "Open follow-ups are concentrated across active mid-market opportunities.",
+    time: "1 hour ago"
+  },
+  {
+    title: "Northwind account record received new stakeholder notes",
+    detail: "Recent call summary captured next steps for onboarding and renewal planning.",
+    time: "Today"
+  }
+];
 
 export default function Home() {
-  return <div className="relative flex min-h-screen flex-col bg-background"><Navbar /><main className="flex flex-1 flex-col gap-16 px-4 py-10 sm:px-6 lg:px-8"><section className="mx-auto mb-6 w-full max-w-7xl rounded-3xl border border-border/60 bg-card p-4 shadow-sm sm:p-5"><div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"><div><h2 className="text-base font-semibold">Quick links</h2><p className="mt-1 text-sm text-muted-foreground">Jump into the dashboard or authentication flow.</p></div><div className="flex flex-wrap gap-3"><a href="/dashboard" className="rounded-xl border border-border bg-background px-4 py-2 text-sm font-medium transition hover:bg-accent">Dashboard</a><a href="/auth" className="rounded-xl border border-border bg-background px-4 py-2 text-sm font-medium transition hover:bg-accent">Auth</a></div></div></section><section className="mx-auto w-full max-w-7xl rounded-3xl border border-border/60 bg-card p-6 shadow-sm sm:p-8 lg:p-10"><div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between"><div className="max-w-2xl space-y-4"><p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">Internal CRM workspace</p><h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">Plan and launch an end-to-end internal CRM app with persistent storage, authentication, and dashboard workflows for customers and leads.</h1><p className="text-base leading-7 text-muted-foreground sm:text-lg">Track leads, manage accounts, and keep your sales pipeline moving with a clean internal app designed for fast decisions.</p></div><div className="grid gap-3 sm:grid-cols-3 lg:min-w-[28rem] lg:max-w-[32rem]"><div className="rounded-2xl border border-border bg-background p-4"><p className="text-sm text-muted-foreground">Active accounts</p><p className="mt-2 text-3xl font-semibold">128</p></div><div className="rounded-2xl border border-border bg-background p-4"><p className="text-sm text-muted-foreground">Open deals</p><p className="mt-2 text-3xl font-semibold">34</p></div><div className="rounded-2xl border border-border bg-background p-4"><p className="text-sm text-muted-foreground">Tasks due</p><p className="mt-2 text-3xl font-semibold">12</p></div></div></div></section><section className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-3"><article className="rounded-3xl border border-border/60 bg-card p-6 shadow-sm"><h2 className="text-lg font-semibold">Pipeline overview</h2><p className="mt-2 text-sm leading-6 text-muted-foreground">Monitor qualified leads, stage movement, and forecast confidence across the pipeline.</p></article><article className="rounded-3xl border border-border/60 bg-card p-6 shadow-sm"><h2 className="text-lg font-semibold">Account activity</h2><p className="mt-2 text-sm leading-6 text-muted-foreground">Review recent notes, calls, and follow-ups for each customer relationship.</p></article><article className="rounded-3xl border border-border/60 bg-card p-6 shadow-sm"><h2 className="text-lg font-semibold">Team performance</h2><p className="mt-2 text-sm leading-6 text-muted-foreground">See rep workload, response times, and weekly progress at a glance.</p></article></section><section className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-[1.25fr_0.75fr]"><article className="rounded-3xl border border-border/60 bg-card p-6 shadow-sm"><h2 className="text-lg font-semibold">CRM navigation</h2><ul className="mt-4 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2"><li>Customers</li><li>Deals</li><li>Tasks</li><li>Reports</li><li>Pipeline</li><li>Settings</li></ul></article><article className="rounded-3xl border border-border/60 bg-card p-6 shadow-sm"><h2 className="text-lg font-semibold">Recent activity</h2><ul className="mt-4 space-y-3 text-sm leading-6 text-muted-foreground"><li>Acme Corp moved to proposal review after today&apos;s sales call.</li><li>3 follow-up tasks are due before end of day for open opportunities.</li><li>Northwind account owner added new notes and next-step reminders.</li></ul></article></section></main></div>;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  return (
+    <div className="relative min-h-screen bg-background">
+      <div className="absolute inset-x-0 top-0 -z-10 h-[28rem] bg-gradient-to-b from-primary/5 via-background to-background" />
+      <Navbar />
+      <main className="flex flex-1 flex-col gap-10 px-4 pb-14 pt-8 sm:px-6 lg:px-8 lg:pt-10">
+        <section className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="rounded-[2rem] border border-border/60 bg-card p-6 shadow-sm sm:p-8 lg:p-10">
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+                <ShieldCheck className="h-3.5 w-3.5" />
+                Professional CRM workspace
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                Production-style UX
+              </span>
+            </div>
+
+            <div className="mt-6 max-w-3xl space-y-5">
+              <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+                A more polished CRM experience for pipeline visibility, team execution, and account growth.
+              </h1>
+              <p className="max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
+                Upgrade the existing CRM shell into a cleaner, more executive-ready interface with clearer hierarchy,
+                stronger data presentation, and faster navigation into the core workspace.
+              </p>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/dashboard"
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90"
+              >
+                Open dashboard
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/auth"
+                className="inline-flex items-center gap-2 rounded-xl border border-border bg-background px-5 py-3 text-sm font-medium transition hover:bg-accent"
+              >
+                View authentication
+              </Link>
+            </div>
+
+            <div className="mt-10 grid gap-4 md:grid-cols-3">
+              {metrics.map((metric) => (
+                <div key={metric.label} className="rounded-2xl border border-border bg-background p-4">
+                  <p className="text-sm text-muted-foreground">{metric.label}</p>
+                  <p className="mt-2 text-3xl font-semibold tracking-tight">{metric.value}</p>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">{metric.detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <aside className="flex flex-col gap-6">
+            <div className="rounded-[2rem] border border-border/60 bg-card p-6 shadow-sm sm:p-8">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                Workspace snapshot
+              </p>
+              <div className="mt-6 space-y-4">
+                <div className="rounded-2xl border border-border bg-background p-4">
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="text-sm font-medium">Qualified leads</span>
+                    <span className="text-sm font-semibold">34</span>
+                  </div>
+                  <div className="mt-3 h-2 rounded-full bg-muted">
+                    <div className="h-2 w-[72%] rounded-full bg-primary" />
+                  </div>
+                </div>
+                <div className="rounded-2xl border border-border bg-background p-4">
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="text-sm font-medium">Active accounts</span>
+                    <span className="text-sm font-semibold">128</span>
+                  </div>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Stable portfolio health with strong owner coverage across key customers.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-border bg-background p-4">
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="text-sm font-medium">Tasks due today</span>
+                    <span className="inline-flex items-center gap-1 rounded-full bg-amber-500/10 px-2.5 py-1 text-xs font-medium text-amber-600 dark:text-amber-400">
+                      <Clock3 className="h-3.5 w-3.5" />
+                      12 due
+                    </span>
+                  </div>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Focus the team on follow-ups, proposal reviews, and next-step coordination.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] border border-border/60 bg-card p-6 shadow-sm sm:p-8">
+              <h2 className="text-lg font-semibold">What this upgrade emphasizes</h2>
+              <ul className="mt-5 space-y-4">
+                {highlights.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm leading-6 text-muted-foreground">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 flex-none text-primary" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </aside>
+        </section>
+
+        <section className="mx-auto w-full max-w-7xl">
+          <HeroSection />
+        </section>
+
+        <section className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-3">
+          {featureCards.map((card) => {
+            const Icon = card.icon;
+            return (
+              <article key={card.title} className="rounded-[2rem] border border-border/60 bg-card p-6 shadow-sm">
+                <div className="inline-flex rounded-2xl border border-border bg-background p-3">
+                  <Icon className="h-5 w-5 text-primary" />
+                </div>
+                <h2 className="mt-5 text-xl font-semibold">{card.title}</h2>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">{card.description}</p>
+              </article>
+            );
+          })}
+        </section>
+
+        <section className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <article className="rounded-[2rem] border border-border/60 bg-card p-6 shadow-sm sm:p-8">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                  Operating model
+                </p>
+                <h2 className="mt-2 text-2xl font-semibold">Navigation built for day-to-day CRM execution</h2>
+              </div>
+              <Link href="/dashboard/leads" className="text-sm font-medium text-primary transition hover:opacity-80">
+                Review lead workspace
+              </Link>
+            </div>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              {["Customers", "Leads", "Pipeline", "Tasks", "Reports", "Settings"].map((item) => (
+                <div key={item} className="rounded-2xl border border-border bg-background px-4 py-4">
+                  <p className="font-medium">{item}</p>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Focused surface for internal CRM workflows and team decision-making.
+                  </p>
+                </div>
+              ))}
+            </div>
+          </article>
+
+          <article className="rounded-[2rem] border border-border/60 bg-card p-6 shadow-sm sm:p-8">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">Recent activity</p>
+            <div className="mt-6 space-y-4">
+              {activityFeed.map((item) => (
+                <div key={item.title} className="rounded-2xl border border-border bg-background p-4">
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="text-sm font-semibold leading-6">{item.title}</h3>
+                    <span className="whitespace-nowrap text-xs text-muted-foreground">{item.time}</span>
+                  </div>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.detail}</p>
+                </div>
+              ))}
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  );
 }
