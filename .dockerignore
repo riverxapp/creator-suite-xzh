@@ -1,13 +1,29 @@
 node_modules
 .next
 .git
+.gitignore
 .env
 .env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 .DS_Store
 .vercel
 coverage
 old-dockerfile.txt
 old-docker-compose.yml
+data/
+storage/
+local-data/
+uploads/
+*.db-wal
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.pglite
+*.log
 
 # Unified agent instructions for codeType=nextjs:
 # - Role: Unified planning and execution orchestrator for repo-scoped code changes.
