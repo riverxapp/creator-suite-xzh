@@ -12,8 +12,8 @@ export default function Home() {
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
                 Internal CRM workspace
               </p>
-              <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">Plan and launch an end-to-end internal CRM app with persistent storage, authentication, and dashboard workflows for customers and leads.
-
+              <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+                Plan and launch an end-to-end internal CRM app with persistent storage, authentication, and dashboard workflows for customers and leads.
               </h1>
               <p className="text-base leading-7 text-muted-foreground sm:text-lg">
                 Track leads, manage accounts, and keep your sales pipeline moving with a clean internal app designed for fast decisions.
@@ -56,26 +56,26 @@ export default function Home() {
           </article>
         </section>
         <section className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-[1.25fr_0.75fr]">
-  <article className="rounded-3xl border border-border/60 bg-card p-6 shadow-sm">
-    <h2 className="text-lg font-semibold">CRM navigation</h2>
-    <ul className="mt-4 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
-      <li>Customers</li>
-      <li>Deals</li>
-      <li>Tasks</li>
-      <li>Reports</li>
-      <li>Pipeline</li>
-      <li>Settings</li>
-    </ul>
-  </article>
-  <article className="rounded-3xl border border-border/60 bg-card p-6 shadow-sm">
-    <h2 className="text-lg font-semibold">Recent activity</h2>
-    <ul className="mt-4 space-y-3 text-sm leading-6 text-muted-foreground">
-      <li>Acme Corp moved to proposal review after today&apos;s sales call.</li>
-      <li>3 follow-up tasks are due before end of day for open opportunities.</li>
-      <li>Northwind account owner added new notes and next-step reminders.</li>
-    </ul>
-  </article>
-</section>
-        
+          <article className="rounded-3xl border border-border/60 bg-card p-6 shadow-sm">
+            <h2 className="text-lg font-semibold">CRM navigation</h2>
+            <ul className="mt-4 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
+              <li>Customers</li>
+              <li>Deals</li>
+              <li>Tasks</li>
+              <li>Reports</li>
+              <li>Pipeline</li>
+              <li>Settings</li>
+            </ul>
+          </article>
+          <article className="rounded-3xl border border-border/60 bg-card p-6 shadow-sm">
+            <h2 className="text-lg font-semibold">Recent activity</h2>
+            <ul className="mt-4 space-y-3 text-sm leading-6 text-muted-foreground">
+              <li>Acme Corp moved to proposal review after today&apos;s sales call.</li>
+              <li>3 follow-up tasks are due before end of day for open opportunities.</li>
+              <li>Northwind account owner added new notes and next-step reminders.</li>
+            </ul>
+          </article>
+        </section>
       </main>
+      
     </div>);}
